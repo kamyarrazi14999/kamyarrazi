@@ -13,8 +13,8 @@ function App() {
   
     return (
       <>
-        {islogin == true ? <h1 onClick={handelstate}>Welcome to the website</h1> :
-          <h1 onClick={handelstate}>Please Login</h1>}
+        {islogin == true && <h1 onClick={handelstate}>Welcome to the website</h1> }
+        {islogin == false && <h1 onClick={handelstate}>Please login</h1> }
     
       </>
     );
