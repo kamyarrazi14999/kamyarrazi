@@ -1,0 +1,19 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+button{
+  width:200px ;
+  height: 50px;
+  background-color:  blue;
+  color: #000;;
+}
