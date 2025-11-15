@@ -1,14 +1,13 @@
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./App.css";
-
 function App  () {
   useEffect(() => {
     // document.title = "صفحه اصلی";
     setInterval(() => {
-      console.log("hello world");
+      console.log("سلام");
     
-    }, 1000;
+    },300)
 }, []); 
 
   return (
