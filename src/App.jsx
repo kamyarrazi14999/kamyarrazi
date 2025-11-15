@@ -2,12 +2,20 @@
 import { useEffect } from "react";
 import "./App.css";
 function App  () {
+  const handelResize =() => { 
+
+    console.log("ریسایز شد");
+  }
+  
+  
   useEffect(() => {
-    // document.title = "صفحه اصلی";
-    setInterval(() => {
-      console.log("سلام");
+  
+    // setInterval(() => {
+    //   console.log("سل")
     
-    },300)
+    // },300)
+window.addEventListener('resize' ,handelResize)
+
 }, []); 
 
   return (
