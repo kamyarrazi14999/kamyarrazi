@@ -2,19 +2,22 @@
 import { useEffect } from "react";
 import "./App.css";
 function App  () {
-  const handelResize =() => { 
+  // const handelResize =() => { 
 
-    console.log("ریسایز شد");
-  }
+  //   console.log("ریسایز شد");
+  // }
   
   
   useEffect(() => {
   
     // setInterval(() => {
-    //   console.log("سل")
+    //   console.log("سلام")
     
     // },300)
-window.addEventListener('resize' ,handelResize)
+    // window.addEventListener('resize' ,handelResize)
+    fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((response) => response.json())
+    .then((data) => console.log(data));
 
 }, []); 
 
