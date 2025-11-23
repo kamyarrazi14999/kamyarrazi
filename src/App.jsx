@@ -10,8 +10,11 @@ const[count , setCount] = useState (0)
 const[test , settest] = useState (0)
   // console.log("کامپوننت رندر شد");
   useEffect(() => {
-    console.log("من چاق شدم");
-  }, [ count]); 
+    // document.title = `عنوان  ${count}  `
+    fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+  }, [ count ]); 
   
     // setInterval(() => {
     //   console.log("سلام")
