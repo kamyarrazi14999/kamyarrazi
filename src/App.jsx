@@ -6,8 +6,8 @@ function App  () {
 
   //   console.log("ریسایز شد");
   // }
-  
-  
+
+  console.log("کامپوننت رندر شد");
   useEffect(() => {
   
     // setInterval(() => {
@@ -15,9 +15,9 @@ function App  () {
     
     // },300)
     // window.addEventListener('resize' ,handelResize)
-    fetch("https://jsonplaceholder.typicode.com/posts")
-    .then((response) => response.json())
-    .then((data) => console.log(data));
+    // fetch("https://jsonplaceholder.typicode.com/posts")
+    // .then((response) => response.json())
+    // .then((data) => console.log(data));
 
 }, []); 
 
