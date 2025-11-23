@@ -1,14 +1,17 @@
 
-import { useEffect } from "react";
+import { useEffect , useState } from "react";
 import "./App.css";
 function App  () {
   // const handelResize =() => { 
 
   //   console.log("ریسایز شد");
   // }
-
-  console.log("کامپوننت رندر شد");
+const[count , setCount] = useState (0)
+const[test , settest] = useState (0)
+  // console.log("کامپوننت رندر شد");
   useEffect(() => {
+    console.log("من چاق شدم");
+  }, [ count]); 
   
     // setInterval(() => {
     //   console.log("سلام")
@@ -19,11 +22,13 @@ function App  () {
     // .then((response) => response.json())
     // .then((data) => console.log(data));
 
-}, []); 
 
   return (
     <>
-      
+      <button onClick={() => setCount(prev => prev + 1)}> افزایش عدد </button>
+      <button onClick={() => settest(prev => prev + 1)}> افزایش تست </button>
+      <h1>{count} عدد کانت</h1>
+      <h2>{test} عدد تست</h2>
     </>
   );
 }
