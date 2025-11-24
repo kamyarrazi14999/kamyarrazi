@@ -3,10 +3,10 @@
 import "./App.css";
 function App() {
  let users = [
-   { id: 1, name: "John Doe", age: 30 },
-    { id: 2, name: "Jane Smith", age: 25 },
-   { id: 3, name: "Bob Johnson", age: 40 },
-    { id: 4, name: "Alice Williams", age: 28 },
+   { 'id': 1, 'name': "John Doe", 'age': 30 },
+    { 'id': 2, 'name': "Jane Smith", 'age': 25 },
+   { 'id': 3, 'name': "Bob Johnson", 'age': 40 },
+    { 'id': 4, 'name': "Alice Williams", 'age': 28 },
 
   ];
   
@@ -63,9 +63,9 @@ function App() {
 
   return (
     <>
-      {users.map((item , index) => (
+      {users.map((item ) => (
           
-      <p key= {item.id}> {item.name} - {item.age } {index}   </p>
+        <p key={item.id}> {item.name} - {item.age} - {item.id}  </p>
       ))}
 
 
