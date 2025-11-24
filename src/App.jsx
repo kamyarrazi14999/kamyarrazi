@@ -35,7 +35,7 @@ function App() {
   }, [] )
   useEffect(() => {
      let hendelInterval = setTimeout(() => {
-     return () => clearTimeout(hendelInterval);
+     return () => clearInterval(hendelInterval);
     }, 300);
 
   }, [] )
