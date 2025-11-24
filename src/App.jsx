@@ -63,9 +63,9 @@ function App() {
 
   return (
     <>
-      {users.map((item,index) => (
+      {users.map((item , index) => (
           
-      <p key= {index}>{item}- {index}</p>
+      <p key= {item.id}> {item.name} - {item.age } {index}   </p>
       ))}
 
 
