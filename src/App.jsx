@@ -2,7 +2,13 @@
 // import { useEffect , useState } from "react";
 import "./App.css";
 function App() {
- let users = ['kamyar' , 'razi' , 'ali' , 'mohammad' ];
+ let users = [
+   { id: 1, name: "John Doe", age: 30 },
+    { id: 2, name: "Jane Smith", age: 25 },
+   { id: 3, name: "Bob Johnson", age: 40 },
+    { id: 4, name: "Alice Williams", age: 28 },
+
+  ];
   
   
   
@@ -59,7 +65,7 @@ function App() {
     <>
       {users.map((item,index) => (
           
-      <p>{item}- {index}</p>
+      <p key= {index}>{item}- {index}</p>
       ))}
 
 
