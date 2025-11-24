@@ -2,8 +2,10 @@
 import { useEffect , useState } from "react";
 import "./App.css";
 function App() {
+  let hendelResize =() => { 
+   ;
+  }
   // const handelResize =() => { 
-
   //   console.log("ریسایز شد");
   // }
   // const [count, setCount] = useState(0)
@@ -34,11 +36,13 @@ function App() {
 
   }, [] )
   useEffect(() => {
-     let hendelInterval = setTimeout(() => {
-     return () => clearInterval(hendelInterval);
-    }, 300);
+    window.addEventListener('resize', hendelResize);
+    return () => 
+      window.removeEventListener('resize', hendelResize);
+   
+  
 
-  }, [] )
+    }, [] );
 
   return (
     <>
