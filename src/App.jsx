@@ -1,10 +1,21 @@
 
-import { useEffect , useState } from "react";
+// import { useEffect , useState } from "react";
 import "./App.css";
 function App() {
-  let hendelResize =() => { 
-   ;
-  }
+ let users = ['kamyar' , 'razi' , 'ali' , 'mohammad' ];
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  // let hendelResize =() => {
+  //  ;
+  // }
   // const handelResize =() => { 
   //   console.log("ریسایز شد");
   // }
@@ -29,23 +40,31 @@ function App() {
   // fetch("https://jsonplaceholder.typicode.com/posts")
   // .then((response) => response.json())
   // .then((data) => console.log(data));
-  useEffect(() => {
-     let hendelTimeout = setTimeout(() => {
-     return () => clearTimeout(hendelTimeout);
-    }, 300);
+  // useEffect(() => {
+  //    let hendelTimeout = setTimeout(() => {
+  //    return () => clearTimeout(hendelTimeout);
+  //   }, 300);
 
-  }, [] )
-  useEffect(() => {
-    window.addEventListener('resize', hendelResize);
-    return () => 
-      window.removeEventListener('resize', hendelResize);
+  // }, [] )
+  // useEffect(() => {
+  //   window.addEventListener('resize', hendelResize);
+  //   return () => 
+  //     window.removeEventListener('resize', hendelResize);
    
   
 
-    }, [] );
+  //   }, [] );
 
   return (
     <>
+      {users.map((item,index) => (
+          
+      <p>{item}- {index}</p>
+      ))}
+
+
+
+
       {/* <button onClick={() => setCount(prev => prev + 1)}> افزایش عدد </button>
       <button onClick={() => settest(prev => prev + 1)}> افزایش تست </button>
       <h1>{count} عدد کانت</h1>
