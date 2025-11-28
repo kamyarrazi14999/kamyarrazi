@@ -9,6 +9,10 @@ function App() {
 
   //   ];
   const [users, setUsers] = useState([]);
+  const hendeldelete = (id) => {
+    setUsers((prevUsers) => prevUsers.filter(item => item.id !== id));
+   
+  };
 
   const fetchUsers = async () => {
     const res = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -66,7 +70,13 @@ useEffect(() => {
      
         {users.map((item) => (
           <div key={item.id}>
-            <span >{item.id}-{item.name}-{item.age}  </span>
+            <span >{item.id}- </span>
+            <span >{item.name}-</span>
+            <span >{item.age} -</span>
+            <span >{item.username} -</span>
+            <span >{item.address.zipcode} </span>
+            <span onClick={() => hendeldelete(item.id)} style={{color:"red"}}> حذف</span>
+
         </div>
         ))}
         
