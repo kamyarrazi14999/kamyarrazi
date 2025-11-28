@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect ,useState } from "react";
 import "./App.css";
 function App() {
   //  let users = [
@@ -63,9 +63,15 @@ useEffect(() => {
   return (
     <>
       
+     
+        {users.map((item) => (
+          <div key={item.id}>
+            <span >{item.id}-{item.name}-{item.age}  </span>
+        </div>
+        ))}
+        
 
 
-      
       {/* {users.map((item ) => (
           
         <p key={item.id}> {item.name} - {item.age} - {item.id}  </p>
