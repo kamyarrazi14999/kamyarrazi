@@ -1,6 +1,9 @@
 import { useEffect ,useState } from "react";
 import "./App.css";
+import { DisplayNumbur } from "./components/input";
+import { Input } from "./components/DisplayNumbur";
 function App() {
+  const [number, setNumber] = useState(0);
   //  let users = [
   //    { 'id': 1, 'name': "John Doe", 'age': 30 },
   //     { 'id': 2, 'name': "Jane Smith", 'age': 25 },
@@ -8,22 +11,22 @@ function App() {
   //     { 'id': 4, 'name': "Alice Williams", 'age': 28 },
 
   //   ];
-  const [users, setUsers] = useState([]);
-  const hendeldelete = (id) => {
-    setUsers((prevUsers) => prevUsers.filter(item => item.id !== id));
-   
-  };
+  // const [users, setUsers] = useState([]);
+  // const hendeldelete = (id) => {
+  //   setUsers((prevUsers) => prevUsers.filter(item => item.id !== id));
 
-  const fetchUsers = async () => {
-    const res = await fetch("https://jsonplaceholder.typicode.com/users");
-    const data = await res.json();
-    console.log(data);
-    setUsers(data);
+  // };
 
-  };
-useEffect(() => {
-  fetchUsers();
-}, []);
+  // const fetchUsers = async () => {
+  //   const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  //   const data = await res.json();
+  //   console.log(data);
+  //   setUsers(data);
+
+  // };
+  // useEffect(() => {
+  //   fetchUsers();
+  // }, []);
   // let hendelResize =() => {
   //  ;
   // }
@@ -66,9 +69,9 @@ useEffect(() => {
 
   return (
     <>
-      
-     
-        {users.map((item) => (
+      <Input />
+      ,<DisplayNumbur number={number} />
+      {/* {users.map((item) => (
           <div key={item.id}>
             <span >{item.id}- </span>
             <span >{item.name}-</span>
@@ -78,10 +81,7 @@ useEffect(() => {
             <span onClick={() => hendeldelete(item.id)} style={{color:"red"}}> حذف</span>
 
         </div>
-        ))}
-        
-
-
+        ))} */}
       {/* {users.map((item ) => (
           
         <p key={item.id}> {item.name} - {item.age} - {item.id}  </p>
