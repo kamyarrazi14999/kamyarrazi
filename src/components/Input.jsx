@@ -1,7 +1,7 @@
-export const Input = () => {
+export const Input = ( {setNumber}) => {
     return (
         <>
-            <input type="number" />
+            <input onChange={ (e) => setNumber(e.target.value) } type="number" />
         </>
     );
 };

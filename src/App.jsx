@@ -8,8 +8,8 @@ function App() {
 const [number, setNumber] = useState(0);
   return (
     <>
-      <Input />
-      <DisplayNumbur />
+      <Input setNumber={setNumber} />
+      <DisplayNumbur number={number} />
     </>
   );
 }
