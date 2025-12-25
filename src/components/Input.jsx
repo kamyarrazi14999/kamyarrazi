@@ -1,7 +1,7 @@
-export const DisplayNumbur = () => {
+export const Input = () => {
     return (
         <>
-            <h1>0</h1>
+            <input type="number" />
         </>
     );
 };
