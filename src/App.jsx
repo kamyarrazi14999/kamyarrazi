@@ -1,16 +1,14 @@
-
 import { useState } from "react";
 import "./App.css";
-import { DisplayNumbur } from "./components/DisplayNumbur";
-import { Input } from "./components/input";
+import { Parent } from "./components/Parent";
 
 function App() {
-const [number, setNumber] = useState(0);
+  const [theme, setTheme] = useState('black');
   return (
     <>
-      <Input setNumber={setNumber} />
-      <DisplayNumbur number={number} />
+      <Parent theme={theme} setTheme={setTheme} />
     </>
   );
 }
+
 export default App;
